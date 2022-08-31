@@ -1,0 +1,165 @@
+:root {
+    --mainFont: 'Quicksand', sans-serif;
+    --lineColor: #dddddd;
+    --fontColor: #292929;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.gray {
+    color: var(--lineColor);
+}
+
+.compostManager, input, select, button {
+    color: var(--fontColor);
+    font-family: var(--mainFont);
+
+}
+
+.button {
+    cursor: pointer;
+}
+
+/* CompostEditor Component */
+.compostEditor {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid var(--lineColor);
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.compostEditor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.compostEditor-title {
+    margin: 0;
+}
+
+.compostEditor-close {
+    height: 2rem;
+}
+
+/* Pile Component */
+.piles {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.pile {
+    
+    padding: 5px 10px;
+    border: solid 2px var(--lineColor);
+    border-radius: 10px;
+
+
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+    align-items: center;
+}
+
+.pile > * {
+    /* background-color: red; */
+    margin: 0;
+}
+
+.pile-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pile-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.pile-icon {
+    height: 2.8rem;
+}
+
+.pile-dateCreated {
+    font-size: 1rem;
+}
+
+.pile-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em
+}
+
+.pile-button {
+    height: 1.5rem;
+}
+
+/* Turn Component */
+.turns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: red; */
+    gap: 1.5rem;
+
+}
+
+.turn {
+    cursor: pointer;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.turn-order {
+    height: .6em;
+    aspect-ratio: 1 / 1;
+
+    border: 2px solid var(--lineColor);
+    border-radius: 100%;
+
+    font-size: 0.8rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.turn-on {
+    background-color: #93d885;
+    border-color: var(--fontColor);
+}
+
+.turn-date {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.turnInput-box {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 10px; 
+}
+
+.turnInput {
+    padding: 10px;
+    border: 2px solid var(--lineColor);
+    border-radius: 10px;
+
+}
+
+.turnInput-title {
+    font-size: 1.3rem;
+    margin: 0;
+}
